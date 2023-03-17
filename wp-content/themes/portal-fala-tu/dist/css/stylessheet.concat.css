@@ -2629,8 +2629,8 @@
   .btn-success.disabled,
   .btn-success:disabled {
     color: #fff;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: #0e0bcfd3;
+    border-color: #0e0bcfd3;
   }
   
   .btn-success:not(:disabled):not(.disabled):active,
