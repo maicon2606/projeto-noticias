@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coockie</title>
+</head>
+<body>
+    <div id="cookie-banner">
+        Este site usa cookies. Para saber mais, consulte nossa política de privacidade. 
+        <button id="accept-cookies">Aceitar</button>
+      </div>
+      
+    
+</body>
+<script>
+    // Função para criar o cookie
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Função para ler o cookie
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+// Verifica se o cookie de preferência de cookies foi definido
+var cookiePreference = getCookie("cookie-preference");
+if (cookiePreference === "accepted") {
+  // Ative o uso de cookies
+}
+
+// Adicione um ouvinte de eventos para o botão "Aceitar"
+var acceptButton = document.getElementById("accept-cookies");
+acceptButton.addEventListener("click", function() {
+  setCookie("cookie-preference", "accepted", 365);
+  // Ative o uso de cookies
+  document.getElementById("cookie-banner").style.display = "none";
+});
+
+</script>
+</html>

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+	<style>
+        :root{
+            --color-white: #fff;
+            --color-dark1: #91E2EB;
+            --color-dark2: #70AFB6;
+            --color-dark3: #414141;
+            --color-dark4: #1c1c1c;
+            --color-dark5: #343434;
+            --color-purple: #b040ff;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--color-dark1);
+            color: var(--color-white);
+        }
+        .img_logo_header{
+            width: 45px;
+        }
+        .header,
+        .navigation_header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .header{
+            background-color: var(--color-dark2);
+            justify-content: space-between;
+            padding: 0 10%;
+            height: 3.5em;
+            box-shadow: 1px 1px 4px var(--color-dark4);
+        }
+        .navigation_header{
+            gap: 3em;
+            z-index: 2;
+        }
+        .content{
+            padding-top: 5em;
+            text-align: center;
+            height: 100vh;
+            transition: 1s;
+        }
+        .navigation_header a{
+            text-decoration: none;
+            color: var(--color-purple);
+            transition: 1s;
+            font-weight: bold;
+        }
+        .navigation_header a:hover{
+            color: var(--color-white);
+        }
+        .active{
+            background: var(--color-dark3);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .btn_icon_header{
+            background: transparent;
+            border: none;
+            color: var(--color-white);
+            cursor: pointer;
+            display: none;
+        }
+        @media screen and (max-width: 768px) {
+            .navigation_header{
+                position: absolute;
+                flex-direction: column !important;
+                top: 0;
+                background: var(--color-dark5);
+                height: 100%;
+                width: 35vw;
+                padding: 1em;
+                animation-duration: 1s;
+                margin-left: -100vw;
+            }
+            .btn_icon_header{
+                display: block;
+            }
+        }
+        @keyframes showSidebar {
+            from {margin-left: -100vw;}
+            to {margin-left: -10vw;}
+        }
+		.search-box {
+    position: absolute;
+    top: 4%;
+    left: 86%;
+    transform: translate(-50%, -50%);
+    background: #0a1b2d;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: #f0f5fb;
+    font-size: 16px;
+    line-height: 40px;
+    width: 0;
+    transition: .5s;
+  }
+  
+  ::-webkit-input-placeholder {
+    color: #5991d1;
+  }
+  .search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background:#0a1b2d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    }
+  
+    .search-box:hover > .search-txt {
+      width: 240px;
+      padding: 0 6px;
+  
+    }
+	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+:root {
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+main {
+    height: 80vh;
+}
+
+footer {
+    width: 100%;
+    color: var(--color-neutral-40);
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+#footer_content {
+    background-color: var(--color-neutral-10);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 3rem 3.5rem;
+}
+
+#footer_contacts h1 {
+    margin-bottom: 0.75rem;
+}
+
+#footer_social_media {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+} 
+
+#footer_social_media .footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    color: var(--color-neutral-40);
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+#footer_social_media .footer-link i {
+    font-size: 1.25rem;    
+}
+
+#footer_social_media .footer-link:hover {
+    opacity: 0.8;
+}
+
+#instagram {
+    background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+}
+
+#facebook {
+    background-color: #4267b3;
+}
+
+#whatsapp {
+    background-color: #25d366;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.footer-list .footer-link {
+    color: var(--color-neutral-30);
+    transition: all 0.4s;
+}
+
+.footer-list .footer-link:hover {
+    color: #7f37c9;
+}
+
+#footer_subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footer_subscribe p {
+    color: var(--color-neutral-30);
+}
+
+#input_group {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-neutral-0);
+    border-radius: 4px;
+}
+
+#input_group input {
+    all: unset;
+    padding: 0.75rem;
+    width: 100%;
+}
+
+#input_group button {
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 0px 1.25rem;
+    font-size: 1.125rem;
+    height: 100%;
+    border-radius: 0px 4px 4px 0px;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover {
+    opacity: 0.8;
+}
+
+#footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-neutral-0);
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 768px) {
+    #footer_content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    #footer_content {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 3rem 2rem;
+    }
+}
+    </style>
+</head>
+<body id="body">
+	<div class="search-box">
+        <input type="text" class="search-txt" placeholder="Pesquisar">
+        <a href="#" class="search-btn"></a>
+            <img src="img/lupa.svg" alt="Lupa" height="20" width="20">
+      </div>
+    <div class="header" id="header">
+        <button onclick="toggleSidebar()" class="btn_icon_header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+            </svg>
+        </button>
+        <div class="logo_header">
+            <img src="logo_gn.png" alt="Logo GN" class="img_logo_header">
+        </div>
+        <div class="navigation_header" id="navigation_header">
+            <button onclick="toggleSidebar()" class="btn_icon_header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg>
+            </button>
+            <a href="#" class="active">Home</a>
+            <a href="#">Cursos</a>
+            <a href="#">Sobre nós</a>
+            <a href="#">Contato</a>
+        </div>
+    </div>
+    <div tabindex="0" class="content" onfocus="closeSidebar()" id="content">
+        <h1>Menu Responsivo - maicon gabriel</h1>
+    </div>
+</body>
+<footer>
+	<div class="footer-content">
+		<div class="footer-contacts">
+			<h1>Logo</h1>
+			<p>It's all about your dreams.</p>
+
+			<div class="footer-social-media">
+			<a href="#" class="footer-link" id="instagram">
+				<i class="fa-brands fa-instagram"></i>
+			</a>
+
+			<a href="#" class="footer-link" id="facebook">
+				<i class="fa-brands fa-facebook-f"></i>
+			</a>
+
+			<a href="#" class="footer-link" id="whatsapp">
+				<i class="fa-brands fa-whatsapp"></i>
+			</a>
+		</div>
+	</div>
+	
+	<ul class="footer-list">
+		<li>
+			<h3>Blog</h3>
+		</li>
+		<li>
+			<a href="#" class="footer-link">Tech</a>
+		</li>
+		<li>
+			<a href="#" class="footer-link">Adventures</a>
+		</li>
+		<li>
+			<a href="#" class="footer-link">Music</a>
+		</li>
+	</ul>
+
+	<ul class="footer-list">
+		<li>
+			<h3>Products</h3>
+		</li>
+		<li>
+			<a href="#" class="footer-link">App</a>
+		</li>
+		<li>
+			<a href="#" class="footer-link">Desktop</a>
+		</li>
+		<li>
+			<a href="#" class="footer-link">Cloud</a>
+		</li>
+	</ul>
+
+	<div class="footer-subscribe">
+		<h3>Subscribe</h3>
+
+		<p>
+			Enter your e-mail to get notified about
+			our news solutions
+		</p>
+
+		<div class="input-group">
+			<input type="email" id="email">
+			<button>
+				<i class="fa-regular fa-envelope"></i>
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="footer-copyright">
+	&#169
+	2023 all rights reserved
+</div>
+
+<div class="cookie-banner">
+    Este site usa cookies. Para saber mais, consulte nossa política de privacidade. 
+    <button id="accept-cookies">Aceitar</button>
+</div>
+</footer> 
+<script>
+    var header           = document.getElementById('header');
+    var navigationHeader = document.getElementById('navigation_header');
+    var content          = document.getElementById('content');
+    var showSidebar      = false;
+
+    function toggleSidebar()
+    {
+        showSidebar = !showSidebar;
+        if(showSidebar)
+        {
+            navigationHeader.style.marginLeft = '-10vw';
+            navigationHeader.style.animationName = 'showSidebar';
+            content.style.filter = 'blur(2px)';
+        }
+        else
+        {
+            navigationHeader.style.marginLeft = '-100vw';
+            navigationHeader.style.animationName = '';
+            content.style.filter = '';
+        }
+    }
+
+    function closeSidebar()
+    {
+        if(showSidebar)
+        {
+            showSidebar = true;
+            toggleSidebar();
+        }
+    }
+
+    window.addEventListener('resize', function(event) {
+        if(window.innerWidth > 768 && showSidebar) 
+        {  
+            showSidebar = true;
+            toggleSidebar();
+        }
+    });
+
+</script>
+<script>
+    // Função para criar o cookie
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Função para ler o cookie
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+// Verifica se o cookie de preferência de cookies foi definido
+var cookiePreference = getCookie("cookie-preference");
+if (cookiePreference === "accepted") {
+  // Ative o uso de cookies
+}
+
+// Adicione um ouvinte de eventos para o botão "Aceitar"
+var acceptButton = document.getElementById("accept-cookies");
+acceptButton.addEventListener("click", function() {
+  setCookie("cookie-preference", "accepted", 365);
+  // Ative o uso de cookies
+  document.getElementById("cookie-banner").style.display = "none";
+});
+
+</script>
+</html>
